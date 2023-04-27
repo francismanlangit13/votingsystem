@@ -9,7 +9,7 @@
     }
 ?>
 <?php include 'includes/header.php'; ?>
-<body class="hold-transition login-page">
+<body class="hold-transition">
 <div class="login-box">
   	<div class="login-logo">
   		<b style="color:white;">USTP-Panaon Voting System</b>
@@ -56,7 +56,8 @@
 </body>
 <style>
 	body{
-		background-image: url('./images/background.jpg') !important
+		background-image: url('./images/background.jpg') !important;
+		background-size: cover;
 	}
 </style>
 <script src="dist/js/showpass.js"></script>

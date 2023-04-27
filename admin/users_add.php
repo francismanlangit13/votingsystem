@@ -2,6 +2,7 @@
 	include 'includes/session.php';
 
 	if(isset($_POST['add'])){
+		$date = date('Y-m-d');
 		$firstname = $_POST['firstname'];
 		$lastname = $_POST['lastname'];
 		$email = $_POST['email'];
@@ -13,7 +14,7 @@
 			move_uploaded_file($_FILES['photo']['tmp_name'], '../images/'.$filename);	
 		}
 
-		$sql = "INSERT INTO admin (email, password, firstname, lastname, role, status, photo) VALUES ('$email', '$password', '$firstname', '$lastname', '$role', '$status', '$filename')";
+		$sql = "INSERT INTO admin (email, password, firstname, lastname, role, status, photo, created_on) VALUES ('$email', '$password', '$firstname', '$lastname', '$role', '$status', '$filename', '$date')";
 		if($conn->query($sql)){
 			$_SESSION['success'] = 'User added successfully';
 		}
@@ -26,5 +27,5 @@
 		$_SESSION['error'] = 'Fill up add form first';
 	}
 
-	header('location: users.php');
+	header('location: users');
 ?>

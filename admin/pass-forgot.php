@@ -54,5 +54,5 @@
 			$_SESSION['error'] = 'No Email Found';
         }
     }
-	header("Location: forgot");
+	header("Location: index");
 ?>

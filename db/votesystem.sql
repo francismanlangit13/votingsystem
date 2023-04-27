@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 27, 2023 at 01:29 AM
+-- Generation Time: Apr 27, 2023 at 11:07 AM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.3.12
 
@@ -46,7 +46,8 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `email`, `username`, `password`, `firstname`, `lastname`, `photo`, `role`, `created_on`, `status`) VALUES
-(1, 'franzcarl13@yahoo.com', 'admin_ssc', '3baf638935a7513e59eb7f1a58f9d4e5', 'Ssc', 'Officer', 'scc.jpg', 'Admin', '2022-09-28', 'Active');
+(1, 'admin@gmail.com', 'admin_ssc', '0192023a7bbd73250516f069df18b500', 'Ssc', 'Officer', 'scc.jpg', 'Admin', '2023-04-27', 'Active'),
+(4, 'user@gmail.com', '', '$2y$10$01alYUD5RpM7PZ5kYRnGruoLyf.v6qd4eyscJkYjcI1fJ3StL1yU.', 'new user', 'last user', '', 'Staff', '2023-04-27', 'Active');
 
 -- --------------------------------------------------------
 
@@ -146,16 +147,6 @@ CREATE TABLE `votes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `votes`
---
-
-INSERT INTO `votes` (`id`, `voters_id`, `candidate_id`, `position_id`, `date_voted`) VALUES
-(13, 10, 18, 8, '2023-04-27 04:36:30'),
-(14, 10, 21, 9, '2023-04-27 04:36:30'),
-(15, 10, 24, 13, '2023-04-27 04:36:30'),
-(16, 10, 25, 13, '2023-04-27 04:36:30');
-
---
 -- Indexes for dumped tables
 --
 
@@ -197,7 +188,7 @@ ALTER TABLE `votes`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `candidates`
