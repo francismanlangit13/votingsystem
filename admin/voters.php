@@ -133,7 +133,7 @@ function getRow(id){
       $('#edit_lastname').val(response.lastname);
       $('#edit_year').val(response.year);
       $('#edit_course').val(response.course);
-      $('#edit_password').val(response.password);
+      //$('#edit_password').val(response.password);
       $('.fullname').html(response.firstname+' '+response.lastname);
     }
   });

@@ -25,7 +25,7 @@
                 <div class="form-group">
                     <label for="schoolID" class="col-sm-3 control-label">School ID</label>
                     <div class="col-sm-9">
-                      <input type="number" class="form-control" id="schoolID" name="schoolID" required>
+                      <input type="text" class="form-control" id="schoolID" name="schoolID" required>
                     </div>
                 </div>
                 <div class="form-group">
@@ -131,6 +131,7 @@
 
                     <div class="col-sm-9">
                       <input type="password" class="form-control" id="edit_password" name="password">
+                      <i style="font-size:1.3rem; margin-left:0rem;">Leave this blank if you dont want to change password...</i>
                     </div>
                 </div>
             </div>

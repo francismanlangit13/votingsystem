@@ -35,7 +35,7 @@
           			<button type="submit" class="btn btn-primary btn-block btn-flat" name="login"><i class="fa fa-sign-in"></i> Sign In</button>
         		</div>
 				<div class="col-xs-6">
-					<button><a href="./admin" style="position:left;">Administrators Here</a></button>
+					<a href="./admin" style="position:left;"><button type="button" >Administrators Here</button></a>
 				</div>
       		</div>
     	</form>
@@ -43,7 +43,7 @@
   	<?php
   		if(isset($_SESSION['error'])){
   			echo "
-  				<div class='callout callout-danger text-center mt20'>
+  				<div class='callout callout-danger text-center'>
 			  		<p>".$_SESSION['error']."</p> 
 			  	</div>
   			";

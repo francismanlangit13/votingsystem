@@ -34,7 +34,7 @@
           			<button type="submit" class="btn btn-primary btn-block btn-flat" name="login"><i class="fa fa-sign-in"></i> Sign In</button>
         		</div>
 				<div class="col-xs-6">
-					<button><a href="../" style="position:left;">Non admin click here</a></button>
+					<a href="../" style="position:left;"><button type="button">Non admin click here</button></a>
 				</div>
       		</div>
     	</form>

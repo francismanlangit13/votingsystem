@@ -8,13 +8,14 @@
 		$email = $_POST['email'];
 		$role = $_POST['role'];
 		$status = $_POST['status'];
-		$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+		$password = $_POST['password'];
+		$newpass = MD5($password);
 		$filename = $_FILES['photo']['name'];
 		if(!empty($filename)){
 			move_uploaded_file($_FILES['photo']['tmp_name'], '../images/'.$filename);	
 		}
 
-		$sql = "INSERT INTO admin (email, password, firstname, lastname, role, status, photo, created_on) VALUES ('$email', '$password', '$firstname', '$lastname', '$role', '$status', '$filename', '$date')";
+		$sql = "INSERT INTO admin (email, password, firstname, lastname, role, status, photo, created_on) VALUES ('$email', '$newpass', '$firstname', '$lastname', '$role', '$status', '$filename', '$date')";
 		if($conn->query($sql)){
 			$_SESSION['success'] = 'User added successfully';
 		}

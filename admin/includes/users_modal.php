@@ -187,4 +187,5 @@
         </div>
     </div>
 </div>
+<script src="../dist/js/showpass2.js"></script>
 <?php } ?>

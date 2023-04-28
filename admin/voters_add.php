@@ -7,13 +7,14 @@
 		$voter = $_POST['schoolID'];
 		$year = $_POST['year'];
 		$course = $_POST['course'];
-		$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+		$password = $_POST['password'];
+		$newpass = MD5($password);
 		$filename = $_FILES['photo']['name'];
 		if(!empty($filename)){
 			move_uploaded_file($_FILES['photo']['tmp_name'], '../images/'.$filename);	
 		}
 
-		$sql = "INSERT INTO voters (voters_id, password, firstname, lastname, year, course, photo) VALUES ('$voter', '$password', '$firstname', '$lastname', '$year', '$course', '$filename')";
+		$sql = "INSERT INTO voters (voters_id, password, firstname, lastname, year, course, photo) VALUES ('$voter', '$newpass', '$firstname', '$lastname', '$year', '$course', '$filename')";
 		if($conn->query($sql)){
 			$_SESSION['success'] = 'Voter added successfully';
 		}

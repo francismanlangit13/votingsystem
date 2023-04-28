@@ -13,14 +13,7 @@
 		$query = $conn->query($sql);
 		$row = $query->fetch_assoc();
 
-		if($password == $row['password']){
-			$password = $row['password'];
-		}
-		else{
-			$password = password_hash($password, PASSWORD_DEFAULT);
-		}
-
-		$sql = "UPDATE admin SET firstname = '$firstname', lastname = '$lastname', password = '$password', role = '$role', status = '$status' WHERE id = '$id'";
+		$sql = "UPDATE admin SET firstname = '$firstname', lastname = '$lastname', role = '$role', status = '$status' WHERE id = '$id'";
 		if($conn->query($sql)){
 			$_SESSION['success'] = 'User updated successfully';
 		}
