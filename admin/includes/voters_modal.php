@@ -25,7 +25,8 @@
                 <div class="form-group">
                     <label for="schoolID" class="col-sm-3 control-label">School ID</label>
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" id="schoolID" name="schoolID" required>
+                      <input type="text" class="form-control" id="voters_id-input" name="schoolID" required>
+                      <div id="voters_id-error"></div>
                     </div>
                 </div>
                 <div class="form-group">
@@ -70,7 +71,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default btn-flat pull-left" data-dismiss="modal"><i class="fa fa-close"></i> Close</button>
-              <button type="submit" class="btn btn-primary btn-flat" name="add"><i class="fa fa-save"></i> Save</button>
+              <button type="submit" id="submit-btn" class="btn btn-primary btn-flat" name="add"><i class="fa fa-save"></i> Save</button>
               </form>
             </div>
         </div>
@@ -198,6 +199,3 @@
         </div>
     </div>
 </div>
-
-
-     

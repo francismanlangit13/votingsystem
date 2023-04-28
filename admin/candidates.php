@@ -57,7 +57,7 @@
                   <th>Firstname</th>
                   <th>Lastname</th>
                   <th>Course</th>
-                  <th>Year</th>
+                  <th>Party</th>
                   <th>Platform</th>
                   <th>Action</th>
                 </thead>

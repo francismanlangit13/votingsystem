@@ -54,7 +54,7 @@
                   <th>Lastname</th>
                   <th>Firstname</th>
                   <th>Photo</th>
-                  <th>Voters ID</th>
+                  <th>Student ID</th>
                   <th>Course</th>
                   <th>Year</th>
                   <th>Action</th>
@@ -138,6 +138,51 @@ function getRow(id){
     }
   });
 }
+</script>
+
+<script>
+    $(document).ready(function() {
+    // disable submit button by default
+    //$('#submit-btn').prop('disabled', true);
+
+    // debounce functions for each input field
+    var debouncedCheckvoters_id = _.debounce(checkvoters_id, 100);
+
+    // attach event listeners for each input field
+    $('#voters_id-input').on('input', debouncedCheckvoters_id);
+
+    function checkvoters_id() {
+        var voters_id = $('#voters_id-input').val();
+        $.ajax({
+        url: 'ajax.php', // replace with the actual URL to check voters_id
+        method: 'POST', // use the appropriate HTTP method
+        data: { voters_id: voters_id },
+        success: function(response) {
+            if (response.exists) {
+                // disable submit button if voters_id is taken
+                $('#submit-btn').prop('disabled', true);
+                $('#voters_id-error').text('School ID already taken').css('color', 'red');
+                $('#voters_id-input').addClass('form-error');
+            } else {
+            $('#voters_id-error').empty();
+            $('#voters_id-input').removeClass('form-error');
+            // enable submit button if voters_id is valid
+            checkIfAllFieldsValid();
+            }
+        },
+        error: function() {
+            $('#voters_id-error').text('Error checking School ID');
+        }
+        });
+    }
+
+    function checkIfAllFieldsValid() {
+        // check if all input fields are valid and enable submit button if so
+        if ($('#voters_id-error').is(':empty')) {
+        $('#submit-btn').prop('disabled', false);
+        }
+    }
+    });
 </script>
 </body>
 </html>

@@ -43,6 +43,13 @@
                     </div>
                 </div>
                 <div class="form-group">
+                    <label for="year" class="col-sm-3 control-label">Party</label>
+
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="year" name="year" required>
+                    </div>
+                </div>
+                <!-- <div class="form-group">
                   <label for="year" class="col-sm-3 control-label">Year Level</label>
                   <div class="col-sm-9">
                     <select id="year" name="year" class="form-control form-control-sm form-control-border select2" required>
@@ -53,7 +60,7 @@
                       <option value="4th Year">4th Year</option>
                     </select>
                   </div>
-                </div>
+                </div> -->
                 <div class="form-group">
                   <label for="course" class="col-sm-3 control-label">Course</label>
                   <div class="col-sm-9">
@@ -136,6 +143,13 @@
                     </div>
                 </div>
                 <div class="form-group">
+                    <label for="edit_year" class="col-sm-3 control-label">Party</label>
+
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="edit_year" name="year" required>
+                    </div>
+                </div>
+                <!-- <div class="form-group">
                   <label for="year" class="col-sm-3 control-label">Year Level</label>
                   <div class="col-sm-9">
                     <select id="edit_year" name="year" class="form-control form-control-sm form-control-border select2" required>
@@ -145,7 +159,7 @@
                       <option value="4th Year" <?php echo isset($year) && $year == '4th Year' ? 'selected' : '' ?>>4th Year</option>
                     </select>
                   </div>
-                </div>
+                </div> -->
                 <div class="form-group">
                   <label for="course" class="col-sm-3 control-label">Course</label>
                   <div class="col-sm-9">

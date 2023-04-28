@@ -65,7 +65,7 @@
                       <a href="javascript:void(0)"  style="position: relative; top: -2.8rem; left: 90%; cursor: pointer; color: lightgray;">
                         <img alt="show password icon" src="../dist/img/eye-close.png" width="25rem" height="2%" id="togglePassword2">
                       </a>
-                      <small><i>input current password to save changes.</i></small>
+                      <small><i style="margin-left:-2.5rem;">input current password to save changes.</i></small>
                     </div>
                 </div>
           	</div>
