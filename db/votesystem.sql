@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 27, 2023 at 11:07 AM
+-- Generation Time: Apr 28, 2023 at 11:52 AM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.3.12
 
@@ -130,7 +130,9 @@ CREATE TABLE `voters` (
 
 INSERT INTO `voters` (`id`, `voters_id`, `username`, `password`, `firstname`, `lastname`, `year`, `course`, `photo`) VALUES
 (10, '2019300208', '', '$2y$10$4ZRDOVXeg96O2WmvWHDJBOAKdNtOthr8Tk7clJGMDd4tbH/Dr301m', 'Francis', 'Manlangit', '4th Year', 'BSIT', ''),
-(11, '2019300207', '', '$2y$10$gJdB5OcTABVvVBS1/.hFaOwoiNrsatmvpKzmhWceEd1cHu9zYiFvy', 'Mark Joseph', 'Account', '2nd Year', 'BSIT', '');
+(11, '2019300207', '', '$2y$10$gJdB5OcTABVvVBS1/.hFaOwoiNrsatmvpKzmhWceEd1cHu9zYiFvy', 'Mark Joseph', 'Account', '2nd Year', 'BSIT', ''),
+(12, '2019', '', 'ea6b2efbdd4255a9f1b3bbc6399b58f4', 'new', 'new', '4th Year', 'BSIT', ''),
+(14, '3-2019300208', '', '0192023a7bbd73250516f069df18b500', 'adasdsad', 'asdasd', '1st Year', 'BSIT', '');
 
 -- --------------------------------------------------------
 
@@ -206,7 +208,7 @@ ALTER TABLE `positions`
 -- AUTO_INCREMENT for table `voters`
 --
 ALTER TABLE `voters`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `votes`
